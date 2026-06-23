@@ -127,120 +127,168 @@ ODBC Connection
 Power BI Dashboard
 ```
 ---
-ETL Automation
+
+## ETL Automation
 
 The first part of the project focused on building an automated ETL pipeline.
 
-What was automated
-Survey CTO data extraction through API
-Scheduled downloads
-Data preprocessing and standardization
-Uploading cleaned files to AWS S3
-Glue crawler execution
-Athena table refresh
-Dashboard-ready data availability
-Business impact
+### What was Automated
+
+- Survey CTO data extraction through API
+- Scheduled survey downloads
+- Data preprocessing and standardization
+- Uploading cleaned files to AWS S3
+- AWS Glue crawler execution
+- Athena table refresh
+- Dashboard-ready data availability
+
+### Business Impact
 
 This automation removed repeated manual downloading and reduced processing time significantly, improving operational efficiency and reporting speed.
 
-Power BI Dashboard
+---
 
-An interactive Power BI dashboard was created to track survey operations.
+## Power BI Dashboard
 
-Dashboard features
-Vendor-wise performance tracking
-Daily quota monitoring
-Valid / invalid sample detection
-Agent-wise sample spread
-Operational status overview
-Survey completion monitoring
+An interactive Power BI dashboard was created to monitor daily survey operations.
 
-This helped the team track performance daily and identify issues early.
+### Dashboard Features
 
-Data Preparation
+- Vendor-wise performance tracking
+- Daily quota monitoring
+- Valid / Invalid sample detection
+- Agent-wise sample spread
+- Operational status overview
+- Survey completion monitoring
 
-The notebook includes preprocessing steps such as:
+The dashboard enabled the operations team to monitor vendor performance in real time and quickly identify field-level issues.
 
-Checking missing values and duplicates
-Removing invalid responses
-Filtering non-audio invalid and audio invalid samples
-Cleaning column names and values
-Handling blank or inconsistent records
-Standardizing text fields
-Mapping party labels to alliances
-Creating usable analysis-ready datasets
-Weighted Analysis
+---
 
-The second part of the project focused on analysis of valid samples.
+## Data Preparation
 
-Steps performed
-Exploratory Data Analysis on valid survey data
-Normalization of demographic fields
-Gender normalization
-Age bucketing
-Caste grouping
-Past election result mapping
-Survey weighting using weightipy
-Alliance-wise and constituency-wise evaluation
-Deep-dive analysis included
-Retention analysis
-A/B testing
-Demographic voting patterns
-Voter behavior analysis
-Confidence interval estimation
-Party-wise vote share understanding
-Analytical Use Cases
+The notebook includes the following preprocessing steps:
 
-This project supports a wide range of election analytics use cases:
+- Checking missing values and duplicates
+- Removing invalid responses
+- Filtering audio and non-audio invalid samples
+- Cleaning column names and values
+- Handling blank or inconsistent records
+- Standardizing text fields
+- Mapping party labels to alliances
+- Creating analysis-ready datasets
 
-Sample quality monitoring
-Vendor performance evaluation
-Survey completeness validation
-Weighted voter opinion analysis
-Demographic segmentation
-Party and alliance trend analysis
-Field-level data governance
-Technologies Used
-Python
-SQL
-PySpark
-AWS S3
-AWS Glue
-AWS Athena
-Survey CTO API
-Power BI
-ODBC
-Pandas
-NumPy
-Weightipy
-Jupyter Notebook
-Key Results
-Automated survey data pipeline from Survey CTO to AWS and Power BI
-Reduced manual effort by 87%
-Enabled faster daily reporting and sample monitoring
-Scaled analytics across 10+ lakh survey records
-Supported deep analysis on 1+ crore electoral records
-Improved data reliability and operational visibility
-How to Run the Project
+---
+
+## Weighted Analysis
+
+The second phase of the project focused on analyzing valid survey responses using statistical weighting techniques.
+
+### Steps Performed
+
+- Exploratory Data Analysis (EDA)
+- Demographic normalization
+- Gender normalization
+- Age bucketing
+- Caste grouping
+- Past election result mapping
+- Survey weighting using **Weightipy**
+- Alliance-wise and constituency-wise evaluation
+
+### Deep-Dive Analysis Included
+
+- Retention analysis
+- A/B testing
+- Demographic voter behavior
+- Voter preference analysis
+- Confidence Interval estimation
+- Party-wise vote share estimation
+
+---
+
+## Analytical Use Cases
+
+This project supports multiple election analytics use cases, including:
+
+- Sample quality monitoring
+- Vendor performance evaluation
+- Survey completeness validation
+- Weighted voter opinion analysis
+- Demographic segmentation
+- Party and alliance trend analysis
+- Field-level data governance
+
+---
+
+## Technologies Used
+
+- Python
+- SQL
+- PySpark
+- AWS S3
+- AWS Glue
+- AWS Athena
+- Survey CTO API
+- Power BI
+- ODBC
+- Pandas
+- NumPy
+- Weightipy
+- Jupyter Notebook
+
+---
+
+## Key Results
+
+- Automated the Survey CTO to AWS ETL pipeline
+- Reduced manual effort by **87%**
+- Enabled faster daily reporting and sample monitoring
+- Processed **10+ lakh survey records**
+- Integrated **1+ crore electoral records**
+- Improved operational visibility through Power BI dashboards
+- Delivered weighted voter analytics for strategic decision-making
+
+---
+
+## How to Run the Project
+
+```bash
 git clone https://github.com/your-username/Kerala-Election-Survey-Analytics.git
+
 cd Kerala-Election-Survey-Analytics
+
 pip install -r requirements.txt
+
 jupyter notebook
+```
 
-Open the notebooks in the notebooks/ folder and run them step by step.
+Open the notebooks inside the `notebooks/` directory and execute them sequentially.
 
-Notebook Details
-Notebook	Purpose
-Survey_API_Integration_Automation.ipynb	API extraction, preprocessing, S3 upload, Glue/Athena workflow
-Weighing.ipynb	Cleaning, normalization, weighting, and deep-dive voter analysis
-Conclusion
+---
 
-This project demonstrates a complete large-scale election analytics workflow, from survey extraction to cloud-based ETL automation, dashboard reporting, and weighted voter analysis.
-It reduced manual work, improved processing speed, and enabled structured decision-making for election operations.
+## Notebook Details
 
-Author
+| Notebook | Description |
+|----------|-------------|
+| **Survey_API_Integration_Automation.ipynb** | Survey CTO API integration, automated ETL pipeline, AWS S3 upload, Glue crawler, Athena integration, and Power BI data preparation |
+| **Weighing.ipynb** | Data cleaning, demographic normalization, survey weighting using Weightipy, statistical analysis, and voter behavior insights |
 
-Nitish Jha
-Data Analyst | Python | SQL | PySpark | Power BI | AWS
+---
+
+## Conclusion
+
+This project demonstrates a complete large-scale election analytics pipeline, covering Survey CTO data extraction, cloud-based ETL automation, Power BI reporting, statistical weighting, and advanced voter behavior analysis.
+
+The solution significantly reduced manual effort, improved processing speed, and enabled data-driven decision-making for election strategy and field operations.
+
+---
+
+## Author
+
+**Nitish Jha**
+
+**Senior Data Analyst**
+
+Python • SQL • PySpark • AWS • Power BI • Machine Learning
     ↓
 Daily Vendor / Agent Monitoring
