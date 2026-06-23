@@ -253,7 +253,7 @@ This project supports multiple election analytics use cases, including:
 ## How to Run the Project
 
 ```bash
-git clone https://github.com/your-username/Kerala-Election-Survey-Analytics.git
+git clone https://github.com/N618/ETL-Survey-Automation-And-Analysis.git
 
 cd Kerala-Election-Survey-Analytics
 
