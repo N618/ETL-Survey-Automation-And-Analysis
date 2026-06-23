@@ -1,0 +1,16 @@
+# Power BI Dashboard
+
+This folder contains the Power BI dashboard developed for monitoring survey operations.
+
+Dashboard Features
+
+- Vendor-wise Performance
+- Daily Quota Tracking
+- Valid / Invalid Sample Monitoring
+- Agent-wise Sample Distribution
+- Operational KPIs
+- Survey Progress Tracking
+
+Main File
+
+survey_vendor_rls.pbix
