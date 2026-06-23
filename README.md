@@ -103,3 +103,27 @@ Kerala-Election-Survey-Analytics
 │
 └── powerbi
     └── survey_vendor_rls.pbix
+
+```
+---
+##End-to-End Workflow
+```
+Survey CTO
+    ↓
+API Extraction
+    ↓
+Automated Data Cleaning
+    ↓
+Validation & Transformation
+    ↓
+Upload to AWS S3
+    ↓
+AWS Glue Crawler
+    ↓
+Athena Tables
+    ↓
+ODBC Connection
+    ↓
+Power BI Dashboard
+    ↓
+Daily Vendor / Agent Monitoring
