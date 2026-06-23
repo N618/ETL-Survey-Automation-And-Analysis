@@ -125,7 +125,7 @@ ODBC Connection
     ↓
 Power BI Dashboard
 
-ETL Automation
+##ETL Automation
 
 The first part of the project focused on building an automated ETL pipeline.
 
@@ -137,11 +137,11 @@ Uploading cleaned files to AWS S3
 Glue crawler execution
 Athena table refresh
 Dashboard-ready data availability
-Business impact
+#Business impact
 
 This automation removed repeated manual downloading and reduced processing time significantly, improving operational efficiency and reporting speed.
 
-Power BI Dashboard
+##Power BI Dashboard
 
 An interactive Power BI dashboard was created to track survey operations.
 
